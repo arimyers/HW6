@@ -4,25 +4,24 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            font-size: x-large;
-        }
-        .auto-style2 {
-            text-align: center;
-        }
-    </style>
+    <title></title><link href="HW6SS.css" rel="stylesheet" type="text/css" />
+
 </head>
-<body>
-    <form id="form1" runat="server" style="background-color: #D2B48C">
-    <div class="auto-style2">
+<body style="background-color: #D2B48C">
+    <form id="form1" runat="server">
+    <div class="center">
     
-        <div class="auto-style2">
-            <span class="auto-style1"><strong>Wicked Easy Recipes</strong></span><br />
+        <div>
+            <div class="header">
+                <br />
+                Wicked Easy Recipes</div>
             Using 5 Ingedients or Less!<br />
-            <br /><a href="Default.aspx">Home</a>&nbsp; |&nbsp; <a href="NewRecipe.aspx">New Recipe</a>&nbsp; |&nbsp; <a href="AboutUs.aspx">About Us</a>&nbsp; |&nbsp; <a href="ContactUs.aspx">Contact</a>
+            <br /><a href="Default.aspx" style="color: #696969">Home</a>&nbsp; |&nbsp; <a href="NewRecipe.aspx" style="color: #696969">New Recipe</a>&nbsp; |&nbsp; <a href="AboutUs.aspx" style="color: #696969">About Us</a>&nbsp; |&nbsp; <a href="ContactUs.aspx" style="color: #696969">Contact</a>
         </div>
+    
+        <br />
+    
+    </div>
         <asp:SqlDataSource ID="sql_recipe" runat="server" ConnectionString="<%$ ConnectionStrings:db_resume %>" SelectCommand="SELECT * FROM [recipe]" DeleteCommand="DELETE FROM [recipe] WHERE [recipeID] = @recipeID" InsertCommand="INSERT INTO [recipe] ([recipe_name], [submitted_by], [ingred1], [ingred2], [ingred3], [ingred4], [ingred5], [prep], [notes]) VALUES (@recipe_name, @submitted_by, @ingred1, @ingred2, @ingred3, @ingred4, @ingred5, @prep, @notes)" UpdateCommand="UPDATE [recipe] SET [recipe_name] = @recipe_name, [submitted_by] = @submitted_by, [ingred1] = @ingred1, [ingred2] = @ingred2, [ingred3] = @ingred3, [ingred4] = @ingred4, [ingred5] = @ingred5, [prep] = @prep, [notes] = @notes WHERE [recipeID] = @recipeID">
             <DeleteParameters>
                 <asp:Parameter Name="recipeID" Type="Int32" />
@@ -52,9 +51,6 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
-        <br />
-    
-    </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="recipeID" DataSourceID="sql_recipe" HorizontalAlign="Center" style="text-align: center">
             <Columns>
                 <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name" SortExpression="recipe_name" />
@@ -67,6 +63,8 @@
             <RowStyle BackColor="LightCoral" ForeColor="White" />
         </asp:GridView>
         <br />
+        <div class="footer" >&#169 2014 Software Development & Design<br />
+        </div>
     </form>
 </body>
 </html>
