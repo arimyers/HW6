@@ -63,9 +63,9 @@
             <EditRowStyle BackColor="LightCoral" />
             <FieldHeaderStyle BackColor="#FFFF99" Font-Bold="True" />
             <Fields>
-                <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name:" SortExpression="recipe_name" />
-                <asp:BoundField DataField="submitted_by" HeaderText="Submitted By:" SortExpression="submitted_by" />
-                <asp:BoundField DataField="ingred1" HeaderText="Ingredient 1:" SortExpression="ingred1" />
+                <asp:BoundField DataField="recipe_name" HeaderText="Recipe Name*:" SortExpression="recipe_name" />
+                <asp:BoundField DataField="submitted_by" HeaderText="Submitted By*:" SortExpression="submitted_by" />
+                <asp:BoundField DataField="ingred1" HeaderText="Ingredient 1*:" SortExpression="ingred1" />
                 <asp:BoundField DataField="ingred2" HeaderText="Ingredient 2:" SortExpression="ingred2" />
                 <asp:BoundField DataField="ingred3" HeaderText="Ingredient 3:" SortExpression="ingred3" />
                 <asp:BoundField DataField="ingred4" HeaderText="Ingredient 4:" SortExpression="ingred4" />
